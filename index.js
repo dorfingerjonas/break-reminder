@@ -3,8 +3,13 @@ const client = new Discord.Client();
 const token = require('./auth').token;
 let interval;
 
+client.on('ready', () => {
+    console.log('Bot started...');
+});
+
 client.on('message', (msg) => {
     if (msg.content === '!break-reminder') {
+        client.guilds.cache.get('687252363446190080').channels.cache.get('687261444869455883').send("Bot will now remind you when it's time for a break.");
         const breakTimes = [
             {'time': '08:50', 'sent': false},
             {'time': '09:45', 'sent': false},
@@ -31,6 +36,7 @@ client.on('message', (msg) => {
             }
         }, 1000);
     } else if (msg.content === '!break-reminder-stop') {
+        console.log('Bot stopped');
         clearInterval(interval);
     }
 });
