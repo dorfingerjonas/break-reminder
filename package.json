@@ -1,0 +1,24 @@
+{
+  "name": "break-reminder",
+  "version": "1.0.0",
+  "description": "Discord Bot for our class discord server, to remind teachers when the break has started",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorfingerjonas/break-reminder.git"
+  },
+  "author": "Jonas Dorfinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorfingerjonas/break-reminder/issues"
+  },
+  "homepage": "https://github.com/dorfingerjonas/break-reminder#readme",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "discord.js": "^12.0.2",
+    "winston": "^3.2.1"
+  }
+}
