@@ -38,6 +38,12 @@ client.on('message', (msg) => {
     } else if (msg.content === '!break-reminder-stop') {
         console.log('Bot stopped');
         clearInterval(interval);
+    } else if (msg.author.id === '690480395531321364') {
+        setTimeout(() => {
+            msg.delete().then(() => {
+                console.log('message deleted');
+            });
+        }, 300000);
     }
 });
 
