@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', (msg) => {
     if (msg.content === '!break-reminder') {
-        client.guilds.cache.get('687252363446190080').channels.cache.get('687261444869455883').send("Bot will now remind you when it's time for a break.");
+        msg.channel.send("Bot will now remind you when it's time for a break.");
         const breakTimes = [
             {'time': '08:50', 'sent': false},
             {'time': '09:45', 'sent': false},
@@ -31,7 +31,7 @@ client.on('message', (msg) => {
 
                 if (breakTime.time === time && !breakTime.sent) {
                     breakTime.sent = true;
-                    client.guilds.cache.get('687252363446190080').channels.cache.get('687261444869455883').send("@everyone It's time for a break!");
+                    msg.channel.send("@everyone It's time for a break!");
                 }
             }
         }, 1000);
